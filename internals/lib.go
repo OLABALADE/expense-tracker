@@ -83,9 +83,9 @@ func (l *List) Summary(filename string) {
 	}
 
 	if len(*l) != 0 {
-		fmt.Println(" ID Date       Description   Amount")
+		fmt.Println(" ID\tDate\t\tDescription\tAmount")
 		for index, exp := range *l {
-			fmt.Printf("%3d %100s %s %3.2f\n", index+1, exp.Date.Format("2006-01-02"), exp.Description, exp.Amount)
+			fmt.Printf("%3d\t%s\t%s\t$%3.2f\n", index+1, exp.Date.Format("2006-01-02"), exp.Description, exp.Amount)
 		}
 	} else {
 		fmt.Println("Expense List is empty.")
